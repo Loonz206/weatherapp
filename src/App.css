@@ -462,6 +462,11 @@ template {
 
 /* Extra
 ============================================================================= */
+
+/*
+Only show on screen readers
+*/
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -473,7 +478,7 @@ template {
     border: 0;
 }
 
-.App {
+.app {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -481,24 +486,7 @@ template {
     text-align: center;
 }
 
-/*.loader {*/
-    /*width: 80px;*/
-    /*height: 80px;*/
-/*}*/
-
-/*.loader1 {*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*width: 80px;*/
-    /*animation: spin infinite 3s linear alternate;*/
-/*}*/
-
-/*.loader2 {*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*width: 80px;*/
-    /*animation: spin infinite 3s linear alternate-reverse;*/
-/*}*/
+.loader-pulse {}
 
 .weather-temp-container h1 {
     margin-top:80px;
@@ -512,13 +500,14 @@ template {
 
 .weather-forecast {
     display: flex;
+    flex-wrap:wrap;
     justify-content: center;
     align-items: flex-end;
 }
 
 .weather-forecast .day {
     padding: 10px;
-    min-width: 100px;
+    flex:1 0 100px;
 }
 
 .weather-forecast .day {
@@ -528,7 +517,7 @@ template {
 
 .weather-forecast .day .max {
     font-weight: 400;
-    color: #3BB7EA;
+    color: royalblue;
 }
 
 input {

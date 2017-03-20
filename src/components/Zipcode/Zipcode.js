@@ -15,6 +15,7 @@ class Zipcode extends Component {
         }
     }
 
+    //http://ziplocate.us/ for the zip code search. and again axios so require that.
     getLocationFromZip(zip) {
         var self = this;
         axios({
@@ -22,21 +23,23 @@ class Zipcode extends Component {
             method: 'get',
             responseType: 'json'
         })
-            .then(function(r) {
-                self.props.onValueChange([r.data.lat, r.data.lng]);
+            .then(function(response) {
+                self.props.onValueChange([response.data.lat, response.data.lng]);
                 console.log('Location obtained');
             })
-            .catch(function(r){
-                console.log(r);
+            .catch(function(response){
+                console.log(response);
             });
     }
 
+    //Mounting in the cycle
     render() {
         return <div className="zip">
             <hr/>
             <label htmlFor="zipcode" className="sr-only">Zipcode</label>
             <br/>
-            <input type="text"
+            <input type="number"
+                   required
                    maxLength="5"
                    value={this.state.value}
                    onChange={this.handleChange}

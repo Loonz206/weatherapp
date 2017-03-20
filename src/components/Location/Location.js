@@ -8,6 +8,7 @@ class Location extends Component {
         this.setZipLocation = this.setZipLocation.bind(this);
     }
 
+    //https://www.w3schools.com/html/html5_geolocation.asp
     getGeoLocation() {
         var self = this;
         function success(position) {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//All these sweet ass icons from http://adamwhitcroft.com/climacons/
 import cloudyDay from '../../svg/cloudyday.svg';
 import cloudyNight from '../../svg/cloudynight.svg';
 import cloudy from '../../svg/cloudy.svg';
@@ -48,6 +49,7 @@ class Day extends Component {
         }
     }
 
+    //Mounting cycle, this repeats the days to be displayed with min/max values for temp
     render() {
         return <div className="day">
             { this.getIcon() }

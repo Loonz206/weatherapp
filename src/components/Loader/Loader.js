@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import loaderback from '../../svg/loaderback.svg';
 import loaderfront from '../../svg/loaderfront.svg';
 
 class Loader extends Component {
     render() {
         return <div className="loader">
-            <img src={loaderback} className="loader1" alt="Loading..." />
-            <img src={loaderfront} className="loader2" alt="Loading..." />
+            <h1>Loading...</h1>
+            <img src={loaderfront} className="loader-pulse" alt="Loading..." />
         </div>;
     }
 }

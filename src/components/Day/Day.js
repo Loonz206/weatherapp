@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import cloudyDay from './../svg/cloudyday.svg';
-import cloudyNight from './../svg/cloudynight.svg';
-import cloudy from './../svg/cloudy.svg';
-import fog from './../svg/fog.svg';
-import night from './../svg/night.svg';
-import rain from './../svg/rain.svg';
-import snow from './../svg/snow.svg';
-import storm from './../svg/storm.svg';
-import sun from './../svg/sun.svg';
-import wind from './../svg/wind.svg';
+import cloudyDay from '../../svg/cloudyday.svg';
+import cloudyNight from '../../svg/cloudynight.svg';
+import cloudy from '../../svg/cloudy.svg';
+import fog from '../../svg/fog.svg';
+import night from '../../svg/night.svg';
+import rain from '../../svg/rain.svg';
+import snow from '../../svg/snow.svg';
+import storm from '../../svg/storm.svg';
+import sun from '../../svg/sun.svg';
+import wind from '../../svg/wind.svg';
 
 class Day extends Component {
     displayDate(){

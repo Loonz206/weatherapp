@@ -1,10 +1,10 @@
-import React, {Componet} from 'react';
-import Day from './Day';
-import Loader from './Loader';
-import Location from './Location';
+import React, { Component } from 'react';
+import Day from '../../components/Day/Day';
+import Loader from '../../components/Loader/Loader';
+import Location from '../../components/Location/Location';
 import axios from 'axios';
 
-class Weather extends Componet {
+class Weather extends Component {
     constructor() {
         super();
         this.state = { weather: null };
@@ -13,8 +13,9 @@ class Weather extends Componet {
 
     getWeather(location) {
         var self = this;
+        var key = 'c00940ee338b6857bc61cf9e4f67815c';
         axios({
-            url: 'https://crossorigin.me/https://api.darksky.net/forecast/'+process.env.REACT_APP_DARK_SKY_KEY+'/'+location[0]+','+location[1],
+            url: 'https://crossorigin.me/https://api.darksky.net/forecast/'+key+'/'+location[0]+','+location[1],
             method: 'get',
             responseType: 'json'
         })
@@ -36,7 +37,10 @@ class Weather extends Componet {
 
     getTodayForecast() {
         if (this.state.weather !== null) {
-            return <div className="weather-temp">{ Math.round(this.state.weather.current) + '˚' }</div>;
+            return <div className="weather-temp-container">
+                    <h1>Today</h1>
+                    <div className="weather-temp">{ Math.round(this.state.weather.current) + '˚' }</div>
+                </div>;
         } else {
             return <Loader />;
         }

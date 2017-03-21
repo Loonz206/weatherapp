@@ -22,6 +22,7 @@ class Weather extends Component {
     getWeather calls the API using axios (promise based HTTP client)
     so axios is added as a dependency. You can pass methods on axios.
     */
+
     getWeather(location) {
         var self = this;
         var key = 'c00940ee338b6857bc61cf9e4f67815c';

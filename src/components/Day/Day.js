@@ -54,7 +54,7 @@ class Day extends Component {
         return <div className="day">
             { this.getIcon() }
             <p>{ this.displayDate() }</p>
-            <p><span className="max">{ Math.round(this.props.max) }˚</span> / { Math.round(this.props.min) }˚</p>
+            <p><span className="max">{ Math.round(this.props.max) }˚</span> / <span className="min">{ Math.round(this.props.min) }˚</span></p>
         </div>;
     }
 }

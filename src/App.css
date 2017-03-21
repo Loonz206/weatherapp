@@ -467,6 +467,10 @@ template {
 Only show on screen readers
 */
 
+body {
+    font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -479,22 +483,28 @@ Only show on screen readers
 }
 
 .app {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display:block;
+    width:94%;
+    margin:20px auto;
+}
+
+.loader {
     text-align: center;
 }
 
-.loader-pulse {}
+.loader-pulse {
+    width:10em;
+}
 
 .weather-temp-container h1 {
     margin-top:80px;
+    text-align: center;
 }
 
 .weather-temp {
     font-size: 10em;
     font-weight: 900;
+    text-align: center;
     color: #212121;
 }
 
@@ -513,6 +523,7 @@ Only show on screen readers
 .weather-forecast .day {
     padding: 10px;
     min-width: 100px;
+    text-align: center;
 }
 
 .weather-forecast .day .max {
@@ -524,17 +535,19 @@ input {
     border:2px solid royalblue;
     padding:8px 16px;
     border-radius:4px;
+    margin:20px auto;
+    width:33%;
+    display: block;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 input:focus {
     outline: none;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(90deg); }
-    50% { transform: rotate(180deg); }
-    75% { transform: rotate(270deg); }
-    100% { transform: rotate(360deg); }
-}
 

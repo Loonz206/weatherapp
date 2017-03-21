@@ -25,7 +25,7 @@ class Weather extends Component {
 
     getWeather(location) {
         var self = this;
-        var key = 'c00940ee338b6857bc61cf9e4f67815c';
+        var key = 'YOUR API KEY HERE';
         axios({
             //http://crossorigin.me/ hack for only GET request based API. Technically all keys should be done from the server
             url: 'https://crossorigin.me/https://api.darksky.net/forecast/'+key+'/'+location[0]+','+location[1],

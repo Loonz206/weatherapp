@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './../App';
-import Weather from './../components/Weather';
+import App from './App';
+import Weather from './components/Weather/Weather';
 import { shallow } from 'enzyme';
 
 it('renders without crashing', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Day from 'Day';
+import Day from './Day';
 import { shallow } from 'enzyme';
 
 it('renders without crashing', () => {
